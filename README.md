@@ -8,16 +8,22 @@ Recognised type values are: **prod**, **test**, defalut is **local**.
 
 > **You may need to optimize the new `scripts` for new env in *./package.json:11*.**
 
+
+
 ### ./process.json
 You need to define the `name` of apps.
  It'll help you recognize your process among lots of PM2 process list.
 
 > **You must optimize the `name` in *./process.dev.json:3* ,  *./process.prod.json:3*  & *./process.test.json:3*.**
 
+
+
 ### /server/config/app.config.ts
 This file is order to make a distinction among many envs.
 You need to set the unique `port` and `baseurl` by yourself.
 Recognised env values are: **production**, **test** and **local**.
+
+
 
 > `port` means the port of process that you just started the PM2 server.
 > 
@@ -25,12 +31,16 @@ Recognised env values are: **production**, **test** and **local**.
 >
 > **You must optimize the `name` in *./server/config/app.config.ts:7-21*. **
 
-###./server/app.ts
+
+
+### ./server/app.ts
 This file is order to catch the error or undefined path and designate the global error-html to show logs or redirect to other url.
 
 > **You must optimize every express middleware callback in *./server/app.ts:22-66* .**
 
-###./server/config/init.ts
+
+
+### ./server/config/init.ts
 In this file, we set the type of template as *html*.
 We define the static middleware and the tag of the template, so that the express can find the static file and send the data to the specified template.
 
@@ -38,10 +48,13 @@ We define the static middleware and the tag of the template, so that the express
 > 
 > **Or need to optimize the new `static` in *./server/config/init.ts:29*.**
 
+
+
 ### ./rsync.sh
 This file is just used for sync data from the node-server from local.
 
 > **You must optimize the `sshremote` & the correct `base_path` in server in *./rsync.sh:3-4*.**
+
 
 
 ## How to run
@@ -49,6 +62,8 @@ This file is just used for sync data from the node-server from local.
 ```
 npm install
 ```
+
+
 
 2.Acooding to your environment, create your node-server by using PM2 in your server.
 ```
@@ -70,6 +85,8 @@ npm run restart:[option]
 ```
 gulp build
 ```
+
+
 
 2.Download the code from the server to local, so that you can test your express static middleware.
 ```
