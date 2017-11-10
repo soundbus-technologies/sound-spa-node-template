@@ -1,0 +1,26 @@
+{
+  "apps": [{
+    "name": "node_test:spa",
+    "script": "./dist/bin/www.js",
+    "exec_mode": "cluster",
+    "max-memory-restart": "300M",
+    "env": {
+      "NODE_ENV": "dev"
+    },
+    "env_dev": {
+      "NODE_ENV": "dev"
+    },
+    "env_local":{
+      "NODE_ENV": "local"
+    },
+    "env_test": {
+      "NODE_ENV": "test"
+    },
+    "env_prod": {
+      "NODE_ENV": "production"
+    },
+    "error_file":"./pm2logs/err.log",
+    "out_file":"./pm2logs/out.log",
+    "log_date_format":"YYYY-MM-DD HH:mm"
+  }]
+}

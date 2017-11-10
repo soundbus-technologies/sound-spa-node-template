@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "noImplicitReturns":true,
+    "moduleResolution": "node",
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "allowUnreachableCode": true,
+    "lib": ["es2017", "es7"],
+    "typeRoots": ["node_modules/@types"],
+    "removeComments": true,
+    "types": [
+      "node"
+    ],
+    "outDir": "./dist",
+    "rootDir": "./server"
+  },
+  "include":[
+    "./server/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
