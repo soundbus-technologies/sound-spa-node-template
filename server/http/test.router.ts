@@ -3,6 +3,7 @@ const router = Router();
 import checkToken from '../middleware/check.token';
 import TestApi from '../apis/test';
 
+// 浏览器发过来的post请求  /api/newauth
 router.post('/newauth', checkToken, async function (req: Request, res: Response, next: NextFunction) {
     try {
         res.send({
@@ -13,6 +14,7 @@ router.post('/newauth', checkToken, async function (req: Request, res: Response,
     }
 });
 
+// 浏览器发过来的get请求  /api/newtest
 router.get('/newtest', checkToken, async function (req: Request, res: Response, next: NextFunction) {
     try {
         const result = await new TestApi(req).getTest(req.body);
