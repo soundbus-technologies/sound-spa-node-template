@@ -79,6 +79,8 @@ npm run restart:[option]
 > Recognised type values are: **prod**, **test** and **nothing**
 >
 > You can also create new env for your convince.
+
+
 <br/><br/>
 ## How to test
 1.Open the compiler to compile typescript to normal javascript.
